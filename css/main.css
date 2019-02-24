@@ -16,8 +16,8 @@ body {
 
 .container{
 	max-width: 1200px;
+	width: 90%;
 	margin: 0 auto;
-	padding: 0 10px;
 	flex-flow: row wrap;
 	display: flex;
   justify-content: center;
@@ -94,7 +94,7 @@ header nav ul li a{
 	margin: 0 auto;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: justify;
+	justify-content: center;
   align-items: center;
 }
 
@@ -152,6 +152,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	height: 50px;
+	width: 100%;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
 	display: flex;
@@ -163,4 +164,58 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/***** Tablet Styling ******/
+@media all and (min-width:768px) {
+
+	.bottom-section {
+		flex-flow: row nowrap;
+		border-top: 1px solid #eee;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		border: none;
+	}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
+	.section-two h4, .section-two p, .section-three h4, .section-three p {
+		padding: 0 30px;
+	}
+}
+
+/***** Desktop Styling ******/
+@media all and (min-width:1200px) {
+	header {
+		height: 110px;
+		flex-flow: row nowrap;
+	}
+	header nav {
+		padding: 46px 0;
+	}
+	header h1 {
+		text-align: left;
+		border-bottom: none;
+	}
+	header nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+	header nav ul li {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+		padding: 0 10px;
+		display: inline;
+	}
+	header nav ul li a{
+		text-decoration: none;
+		color:#77a466;
+	}
 }
